@@ -19,7 +19,7 @@ pipeline {
       }
       steps{
         sh 'go version'
-        sh 'sudo apt-get install git'
+        sh 'apt-get install git'
         sh 'go get github.com/go-sql-driver/mysql'
         sh 'go get github.com/gorilla/sessions'
         sh 'go get github.com/julienschmidt/httprouter'
