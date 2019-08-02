@@ -19,6 +19,7 @@ pipeline {
       }
       steps{
         sh 'go version'
+        sh 'GOCACHE=off' 
         sh 'go get github.com/go-sql-driver/mysql'
         sh 'go get github.com/gorilla/sessions'
         sh 'go get github.com/julienschmidt/httprouter'
