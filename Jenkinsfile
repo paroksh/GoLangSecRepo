@@ -15,11 +15,10 @@ pipeline {
     }
     stage('Compile Go Application') {
       agent {
-        docker {image 'golang:1.12.7-alpine3.10'}
+        docker {image 'golang'}
       }
       steps{
         sh 'go version'
-        sh 'RUN apk add git'
         sh 'go get github.com/go-sql-driver/mysql'
         sh 'go get github.com/gorilla/sessions'
         sh 'go get github.com/julienschmidt/httprouter'
