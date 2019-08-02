@@ -19,7 +19,7 @@ pipeline {
       }
       steps{
         sh 'go env'
-        sh 'export GOCACHE="off"'
+        sh 'export GOCACHE=\""off\""'
         sh 'go env'
         sh 'go get github.com/go-sql-driver/mysql'
         sh 'go get github.com/gorilla/sessions'
