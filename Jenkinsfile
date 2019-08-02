@@ -18,7 +18,6 @@ pipeline {
         docker {image 'golang'}
       }
       steps{
-        sh 'go version'
         sh 'go env'
         sh 'GOCACHE="off"
         sh 'go get github.com/go-sql-driver/mysql'
