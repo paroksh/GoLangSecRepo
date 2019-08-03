@@ -17,10 +17,9 @@ pipeline {
       agent {
         docker {
         image 'golang'
-        args '-e XDG_CACHE_HOME=\\'/tmp/.cache\\''
+        args '-e XDG_CACHE_HOME=\'/tmp/.cache\''
       }
-
-      }
+    }
       steps{
         sh 'go env'
       //  sh 'export GOCACHE=\\"off\\"'
