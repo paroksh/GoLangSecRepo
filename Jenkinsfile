@@ -19,7 +19,8 @@ pipeline {
       agent {
             docker {
               image 'golang'
-              args '-e XDG_CACHE_HOME=\'/tmp/.cache\''
+              //for cache error
+              args '-e XDG_CACHE_HOME=\'/tmp/.cache\' -v /var/lib/jenkins/workspace/govwa:/usr/local/src' 
                    }
             }
       steps
