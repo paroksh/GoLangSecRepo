@@ -14,13 +14,13 @@ pipeline {
             print('Source Code Review Running')
             }
     }
-    stage('Compile Go Application')
+    stage('Compile Go Application1')
      {
       agent {
             docker {
               image 'golang'
               //for cache error
-              args '-e XDG_CACHE_HOME=\'/tmp/.cache\' -v /var/lib/jenkins/workspace/govwa:/usr/local/src' 
+              args '-e XDG_CACHE_HOME=\'/tmp/.cache\' -v /var/lib/jenkins/workspace/govwa:/usr/local/src'
                    }
             }
       steps
