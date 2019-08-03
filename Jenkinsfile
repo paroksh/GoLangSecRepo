@@ -15,7 +15,11 @@ pipeline {
     }
     stage('Compile Go Application') {
       agent {
-        docker {image 'golang'}
+        docker {
+        image 'golang'
+        args '-e XDG_CACHE_HOME='/tmp/.cache''
+      }
+
       }
       steps{
         sh 'go env'
